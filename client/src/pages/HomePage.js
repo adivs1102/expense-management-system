@@ -126,7 +126,7 @@ const HomePage = () => {
           ...values,
           userid: user._id,
         });
-        await axios.post("/api/v1/transections/add-transection", {
+        await axios.post("https://expense-management-system-rouge.vercel.app/api/v1/transections/add-transection", {
           ...values,
           userid: user._id,
         });
