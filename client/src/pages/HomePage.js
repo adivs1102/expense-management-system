@@ -122,6 +122,10 @@ const HomePage = () => {
         setLoading(false);
         message.success("Transaction Updated Successfully");
       } else {
+        console.log({
+          ...values,
+          userid: user._id,
+        });
         await axios.post("/api/v1/transections/add-transection", {
           ...values,
           userid: user._id,
@@ -132,6 +136,7 @@ const HomePage = () => {
       setShowModal(false);
       setEditable(null);
     } catch (error) {
+      console.log(error);
       setLoading(false);
       message.error("please fill all fields");
     }
